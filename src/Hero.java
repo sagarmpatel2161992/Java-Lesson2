@@ -25,28 +25,16 @@ public class Hero {
 	
 	// Setters
 	
-	public void setStrength(int strength) {
-		this.strength = strength;
-	}	
-	public void setSpeed(int speed) {
-		this.speed = speed;
-	}	
-	public void setHealth(int health) {
-		this.health = health;
-	}	
-	public void setName(String name) {
-		this.name = name;		
-		generateAbility();
-	}
-	
+
 	// Constructor
 	public Hero(String name)
 	{
-	this.name = name; 	
+	this.name = name;
+	generateAbility();
 	}
 	public void showAbilities()
 	{
-		System.out.println("Ability Of Here IS:");
+		System.out.println("Ability Of " + this.name + " is:");
 		System.out.println("Strength:" + strength);
 		System.out.println("Speed:" + speed);
 		System.out.println("Health:" + health);
@@ -55,17 +43,24 @@ public class Hero {
 	
 	private void generateAbility()
 	{
-		this.strength = Integer.parseInt("Math.random()*100 +1");
-		this.speed = Integer.parseInt("Math.random()*100 +1");
-		this.health = Integer.parseInt("Math.random()*100 +1");
+		this.strength = (int) (Math.random()*100 +1);
+		this.speed = (int) (Math.random()*100 +1);
+		this.health = (int) (Math.random()*100 +1);
 	}
 	public void fight()
 	{
-		System.out.println(this.name + " is fighting");	
+		System.out.println(this.name + " is fighting");
+		strength--;
+		health--;
+		speed--;
 	}	
 	public void run()
 	{
 		System.out.println(this.name + " is running");
+		strength--;
+		health--;
+		speed--;
+		
 	}
 	
 }
