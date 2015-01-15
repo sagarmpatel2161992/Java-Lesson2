@@ -15,6 +15,17 @@ public class Project {
 		villain.run();
 		villain.steals();
 		villain.showAbilities();
+		
+		// Instantiate Vigilante
+		
+		Vigilante vigilante = new Vigilante("Ms. Savage");
+		vigilante.run();
+		vigilante.steals();
+		vigilante.dealsJustice();
+		vigilante.showAbilities();
+		
+		
+		
 	}
 
 }
