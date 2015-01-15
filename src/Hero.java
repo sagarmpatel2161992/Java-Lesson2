@@ -44,17 +44,28 @@ public class Hero {
 	{
 	this.name = name; 	
 	}
+	public void showAbilities()
+	{
+		System.out.println("Ability Of Here IS:");
+		System.out.println("Strength:" + strength);
+		System.out.println("Speed:" + speed);
+		System.out.println("Health:" + health);
+		System.out.println();
+	}
+	
 	private void generateAbility()
 	{
-		
+		this.strength = Integer.parseInt("Math.random()*100 +1");
+		this.speed = Integer.parseInt("Math.random()*100 +1");
+		this.health = Integer.parseInt("Math.random()*100 +1");
 	}
 	public void fight()
 	{
-		
+		System.out.println(this.name + " is fighting");	
 	}	
 	public void run()
 	{
-		
+		System.out.println(this.name + " is running");
 	}
 	
 }
