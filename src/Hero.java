@@ -1,5 +1,5 @@
 
-public class Hero {
+public class Hero extends Entity {
 	
 	// Private Properties 
 	private int strength;
