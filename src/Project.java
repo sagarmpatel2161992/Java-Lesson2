@@ -7,6 +7,14 @@ public class Project {
 		saggy.run();
 		saggy.fight();
 		saggy.showAbilities();
+		
+		
+		//Villain instantiated
+		
+		Villain villain = new Villain("Sly Man");
+		villain.run();
+		villain.steals();
+		villain.showAbilities();
 	}
 
 }
